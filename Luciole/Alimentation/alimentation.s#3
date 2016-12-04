@@ -3862,7 +3862,7 @@ B340A  3A 40V SMA &lt;br&gt;</description>
 <part name="SUPPLY4" library="SparkFun-Aesthetics" deviceset="VIN" device=""/>
 <part name="C1" library="SparkFun-Capacitors" deviceset="CAP" device="1206" value="4.7 uF"/>
 <part name="SUPPLY9" library="SparkFun-Aesthetics" deviceset="V_BATT" device=""/>
-<part name="J1" library="SparkFun-Connectors" deviceset="M02" device="-JST-2-PTH-NO_SILK" value="LiPo"/>
+<part name="J1" library="SparkFun-Connectors" deviceset="M02" device="JST-PTH-VERT" value="LiPo"/>
 <part name="GND15" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="SUPPLY11" library="SparkFun-Aesthetics" deviceset="V_BATT" device=""/>
 <part name="GND18" library="SparkFun-Aesthetics" deviceset="GND" device=""/>

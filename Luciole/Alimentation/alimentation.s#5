@@ -4099,8 +4099,8 @@ B340A  3A 40V SMA &lt;br&gt;</description>
 <classes>
 <class number="0" name="default" width="0" drill="0">
 </class>
-<class number="1" name="SUPPLY" width="0.0127" drill="0">
-<clearance class="1" value="0.00508125"/>
+<class number="1" name="SUPPLY" width="0.5" drill="0.2">
+<clearance class="1" value="0.5"/>
 </class>
 </classes>
 <parts>
