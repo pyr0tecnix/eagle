@@ -483,10 +483,10 @@ design rules under a new name.</description>
 <attribute name="PINS" value="16" x="58.88" y="9.7" size="1.778" layer="27" display="off"/>
 <attribute name="DIMENSIONS" value="22.0 x 16.0 mm" x="58.88" y="9.7" size="1.778" layer="27" display="off"/>
 </element>
-<element name="I/O" library="SparkFun-Connectors" package="1X06_NO_SILK" value="" x="45.95533125" y="2.991" rot="R90">
+<element name="I/O" library="SparkFun-Connectors" package="1X06_NO_SILK" value="I/O" x="45.95533125" y="2.991" rot="R90">
 <attribute name="PROD_ID" value="CONN-08437" x="45.95533125" y="2.991" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
-<element name="SUPPLY" library="SparkFun-Connectors" package="1X05_NO_SILK" value="" x="72.0188625" y="2.991" rot="R90"/>
+<element name="SUPPLY" library="SparkFun-Connectors" package="1X05_NO_SILK" value="SUPPLY" x="72.0188625" y="2.991" rot="R90"/>
 </elements>
 <signals>
 <signal name="GND">
@@ -568,15 +568,6 @@ design rules under a new name.</description>
 <contactref element="U$1" pad="ADC"/>
 <contactref element="I/O" pad="5"/>
 <wire x1="45.95533125" y1="13.151" x2="50.68" y2="13.5" width="0" layer="19" extent="1-1"/>
-</signal>
-<signal name="V_BAT">
-<contactref element="SUPPLY" pad="4"/>
-</signal>
-<signal name="V_IN">
-<contactref element="SUPPLY" pad="3"/>
-</signal>
-<signal name="V_ALIM">
-<contactref element="SUPPLY" pad="2"/>
 </signal>
 <signal name="O_POWER_CTRL">
 <contactref element="I/O" pad="6"/>

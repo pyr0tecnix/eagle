@@ -144,8 +144,6 @@
 <wire x1="70.601190625" y1="1.85500625" x2="70.601190625" y2="31.74" width="0" layer="20"/>
 <wire x1="70.601190625" y1="31.74" x2="40.64" y2="31.74" width="0" layer="20"/>
 <wire x1="40.64" y1="31.74" x2="40.64" y2="1.766671875" width="0" layer="20"/>
-<dimension x1="40.64" y1="31.74" x2="70.657375" y2="31.711778125" x3="55.61480625" y3="-4.309225" textsize="1.778" layer="1"/>
-<dimension x1="40.64" y1="31.74" x2="40.627990625" y2="1.678340625" x3="74.90338125" y3="16.695478125" textsize="1.778" layer="1"/>
 <text x="41.91" y="21.2725" size="0.3048" layer="16" font="vector" rot="MR270">GPIO04</text>
 <text x="41.91" y="18.7325" size="0.3048" layer="16" font="vector" rot="MR270">GPIO05</text>
 <text x="41.91" y="16.1925" size="0.3048" layer="16" font="vector" rot="MR270">GPIO16</text>
@@ -159,9 +157,6 @@
 MESURE</text>
 <text x="69.5325" y="13.0175" size="0.3048" layer="16" font="vector" rot="MR270">VBAT</text>
 <text x="69.5325" y="15.5575" size="0.3048" layer="16" font="vector" rot="MR270">VCC</text>
-<dimension x1="40.64" y1="31.75" x2="40.64" y2="24.13" x3="37.7825" y3="27.94" textsize="0.3048" layer="1"/>
-<dimension x1="40.64" y1="31.75" x2="45.72" y2="31.75" x3="43.18" y3="33.02" textsize="0.3048" layer="1"/>
-<dimension x1="70.601190625" y1="1.85500625" x2="68.5954375" y2="1.85593125" x3="69.599665625" y3="4.78579375" textsize="1.778" layer="1"/>
 </plain>
 <libraries>
 <library name="SparkFun-Capacitors">

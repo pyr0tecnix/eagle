@@ -630,7 +630,8 @@ design rules under a new name.</description>
 <wire x1="71.9868" y1="5.6224" x2="72.0188625" y2="5.531" width="0.5" layer="16"/>
 <via x="64.8584" y="12.3492" extent="1-16" drill="0.6096"/>
 <contactref element="IC1" pad="5"/>
-<wire x1="51.95" y1="10.7" x2="56.4568" y2="10.905" width="0" layer="19" extent="1-1"/>
+<wire x1="51.95" y1="10.7" x2="56.2518" y2="10.7" width="0.6096" layer="1"/>
+<wire x1="56.2518" y1="10.7" x2="56.4568" y2="10.905" width="0.6096" layer="1"/>
 </signal>
 <signal name="O_POWER_CTRL">
 <contactref element="I/O" pad="6"/>
@@ -755,18 +756,25 @@ design rules under a new name.</description>
 <approved hash="3,1,590098f12dc58a8e"/>
 <approved hash="3,1,6bae8226131c1027"/>
 <approved hash="3,16,99a29ba09ba099a2"/>
-<approved hash="4,1,dc9b2b72550ba493"/>
-<approved hash="4,1,e070169b68ac9868"/>
-<approved hash="4,1,c9023fe941e2b13a"/>
+<approved hash="1,20,67fa799a46b058d0"/>
+<approved hash="1,20,864c582c65d2bbb2"/>
+<approved hash="2,20,246aa4c69a931a3f"/>
 <approved hash="4,1,8b077dee03e7f33f"/>
-<approved hash="4,1,f3c9023c7c358bc1"/>
 <approved hash="4,1,87ae0e45705effa6"/>
+<approved hash="4,1,e070169b68ac9868"/>
+<approved hash="4,1,f3c9023c7c358bc1"/>
+<approved hash="4,1,c9023fe941e2b13a"/>
+<approved hash="4,1,dc9b2b72550ba493"/>
+<approved hash="19,1,e80dac03af9ceb92"/>
+<approved hash="19,1,595e14f3a15e45b3"/>
+<approved hash="4,16,dc9b2b72550ba493"/>
 <approved hash="4,16,e070169b68ac9868"/>
-<approved hash="4,16,c9023fe941e2b13a"/>
 <approved hash="4,16,f3c9023c7c358bc1"/>
 <approved hash="4,16,8b077dee03e7f33f"/>
-<approved hash="4,16,dc9b2b72550ba493"/>
+<approved hash="4,16,c9023fe941e2b13a"/>
 <approved hash="4,16,87ae0e45705effa6"/>
+<approved hash="19,16,e80dac03af9ceb92"/>
+<approved hash="19,16,687645ef839937d1"/>
 </errors>
 </board>
 </drawing>

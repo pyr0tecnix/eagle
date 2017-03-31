@@ -496,22 +496,25 @@ design rules under a new name.</description>
 <attribute name="PROD_ID" value="CONN-08437" x="45.95533125" y="2.991" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
 <element name="SUPPLY" library="SparkFun-Connectors" package="1X05_NO_SILK" value="" x="72.0188625" y="2.991" rot="R90"/>
-<element name="U$1" library="led" package="CLN6A" value="" x="29" y="7"/>
-<element name="Q1" library="SparkFun-DiscreteSemi" package="SOT23-3" value="200mA/50V" x="22" y="2">
-<attribute name="PROD_ID" value="TRANS-00830" x="22" y="2" size="1.778" layer="27" display="off"/>
+<element name="U$1" library="led" package="CLN6A" value="" x="59" y="15"/>
+<element name="Q1" library="SparkFun-DiscreteSemi" package="SOT23-3" value="200mA/50V" x="70" y="19">
+<attribute name="PROD_ID" value="TRANS-00830" x="70" y="19" size="1.778" layer="27" display="off"/>
 </element>
-<element name="Q2" library="SparkFun-DiscreteSemi" package="SOT23-3" value="200mA/50V" x="18" y="2">
-<attribute name="PROD_ID" value="TRANS-00830" x="18" y="2" size="1.778" layer="27" display="off"/>
+<element name="Q2" library="SparkFun-DiscreteSemi" package="SOT23-3" value="200mA/50V" x="59" y="20">
+<attribute name="PROD_ID" value="TRANS-00830" x="59" y="20" size="1.778" layer="27" display="off"/>
 </element>
-<element name="Q3" library="SparkFun-DiscreteSemi" package="SOT23-3" value="200mA/50V" x="14" y="2">
-<attribute name="PROD_ID" value="TRANS-00830" x="14" y="2" size="1.778" layer="27" display="off"/>
+<element name="Q3" library="SparkFun-DiscreteSemi" package="SOT23-3" value="200mA/50V" x="47" y="19">
+<attribute name="PROD_ID" value="TRANS-00830" x="47" y="19" size="1.778" layer="27" display="off"/>
 </element>
-<element name="R1" library="SparkFun-Resistors" package="0805" value="" x="10" y="2"/>
-<element name="R2" library="SparkFun-Resistors" package="0805" value="" x="6" y="2"/>
-<element name="R3" library="SparkFun-Resistors" package="0805" value="" x="2" y="2"/>
-<element name="R4" library="SparkFun-Resistors" package="0805" value="" x="-2" y="2"/>
-<element name="R5" library="SparkFun-Resistors" package="0805" value="" x="-6" y="2"/>
-<element name="R6" library="SparkFun-Resistors" package="0805" value="" x="-10" y="2"/>
+<element name="RGB" library="SparkFun-Resistors" package="0805" value="1KOhm" x="62" y="3"/>
+<element name="RGR" library="SparkFun-Resistors" package="0805" value="1KOhm" x="54" y="3"/>
+<element name="RGG" library="SparkFun-Resistors" package="0805" value="1KOhm" x="58" y="3"/>
+<element name="R_RED" library="SparkFun-Resistors" package="0805" value="" x="50" y="10"/>
+<element name="R_GREEN" library="SparkFun-Resistors" package="0805" value="" x="50" y="7"/>
+<element name="R_BLUE" library="SparkFun-Resistors" package="0805" value="" x="50" y="13" rot="R180"/>
+<element name="RPD_G" library="SparkFun-Resistors" package="0805" value="10KOhm" x="66" y="10" rot="R180"/>
+<element name="RPD_R" library="SparkFun-Resistors" package="0805" value="10KOhm" x="66" y="13" rot="R180"/>
+<element name="RPD_B" library="SparkFun-Resistors" package="0805" value="10KOhm" x="66" y="7" rot="R180"/>
 </elements>
 <signals>
 <signal name="GND">
@@ -530,33 +533,51 @@ design rules under a new name.</description>
 <vertex x="52" y="22"/>
 <vertex x="52" y="32"/>
 </polygon>
-<contactref element="R4" pad="1"/>
-<contactref element="R6" pad="1"/>
-<contactref element="R5" pad="1"/>
-<wire x1="-2.9" y1="2" x2="72.0188625" y2="2.991" width="0" layer="19" extent="1-1"/>
-<wire x1="-6.9" y1="2" x2="-2.9" y2="2" width="0" layer="19" extent="1-1"/>
-<wire x1="-10.9" y1="2" x2="-6.9" y2="2" width="0" layer="19" extent="1-1"/>
+<contactref element="R_RED" pad="1"/>
+<contactref element="R_BLUE" pad="1"/>
+<contactref element="R_GREEN" pad="1"/>
+<contactref element="RPD_B" pad="1"/>
+<contactref element="RPD_G" pad="1"/>
+<contactref element="RPD_R" pad="1"/>
 </signal>
 <signal name="VCC" class="2">
 <contactref element="SUPPLY" pad="5"/>
 </signal>
 <signal name="O_GREEN">
 <contactref element="I/O" pad="1"/>
+<contactref element="RGG" pad="1"/>
+<contactref element="RPD_G" pad="2"/>
+<wire x1="57.1" y1="3" x2="65.1" y2="10" width="0" layer="19" extent="1-1"/>
+<wire x1="45.95533125" y1="2.991" x2="57.1" y2="3" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="O_BLUE">
 <contactref element="I/O" pad="3"/>
+<contactref element="RGB" pad="1"/>
+<contactref element="RPD_B" pad="2"/>
+<wire x1="61.1" y1="3" x2="65.1" y2="7" width="0" layer="19" extent="1-1"/>
+<wire x1="45.95533125" y1="8.071" x2="61.1" y2="3" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="I_BUTTON">
 <contactref element="I/O" pad="4"/>
 </signal>
 <signal name="O_RED">
 <contactref element="I/O" pad="2"/>
+<contactref element="RGR" pad="1"/>
+<contactref element="RPD_R" pad="2"/>
+<wire x1="53.1" y1="3" x2="65.1" y2="13" width="0" layer="19" extent="1-1"/>
+<wire x1="45.95533125" y1="5.531" x2="53.1" y2="3" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="I_VBAT">
 <contactref element="I/O" pad="5"/>
 </signal>
 <signal name="V_BAT">
 <contactref element="SUPPLY" pad="4"/>
+<contactref element="U$1" pad="2"/>
+<contactref element="U$1" pad="4"/>
+<contactref element="U$1" pad="6"/>
+<wire x1="62.325" y1="13.4" x2="72.0188625" y2="10.611" width="0" layer="19" extent="1-1"/>
+<wire x1="62.325" y1="16.6" x2="62.325" y2="13.4" width="0" layer="19" extent="1-1"/>
+<wire x1="55.675" y1="15" x2="62.325" y2="13.4" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="V_IN">
 <contactref element="SUPPLY" pad="3"/>
@@ -569,18 +590,48 @@ design rules under a new name.</description>
 </signal>
 <signal name="N$1">
 <contactref element="Q3" pad="2"/>
-<contactref element="R6" pad="2"/>
-<wire x1="-9.1" y1="2" x2="14.95" y2="1" width="0" layer="19" extent="1-1"/>
+<contactref element="R_BLUE" pad="2"/>
+<wire x1="49.1" y1="13" x2="47.95" y2="18" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$2">
 <contactref element="Q2" pad="2"/>
-<contactref element="R5" pad="2"/>
-<wire x1="-5.1" y1="2" x2="18.95" y2="1" width="0" layer="19" extent="1-1"/>
+<contactref element="R_GREEN" pad="2"/>
+<wire x1="50.9" y1="7" x2="59.95" y2="19" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$3">
 <contactref element="Q1" pad="2"/>
-<contactref element="R4" pad="2"/>
-<wire x1="-1.1" y1="2" x2="22.95" y2="1" width="0" layer="19" extent="1-1"/>
+<contactref element="R_RED" pad="2"/>
+<wire x1="50.9" y1="10" x2="70.95" y2="18" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$4">
+<contactref element="RGG" pad="2"/>
+<contactref element="Q2" pad="1"/>
+<wire x1="58.9" y1="3" x2="58.05" y2="19" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$5">
+<contactref element="RGR" pad="2"/>
+<contactref element="Q1" pad="1"/>
+<wire x1="54.9" y1="3" x2="69.05" y2="18" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$6">
+<contactref element="RGB" pad="2"/>
+<contactref element="Q3" pad="1"/>
+<wire x1="46.05" y1="18" x2="62.9" y2="3" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$7">
+<contactref element="Q1" pad="3"/>
+<contactref element="U$1" pad="1"/>
+<wire x1="55.675" y1="16.6" x2="70" y2="20.1" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$8">
+<contactref element="U$1" pad="3"/>
+<contactref element="Q2" pad="3"/>
+<wire x1="55.675" y1="13.4" x2="59" y2="21.1" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$9">
+<contactref element="Q3" pad="3"/>
+<contactref element="U$1" pad="5"/>
+<wire x1="47" y1="20.1" x2="62.325" y2="15" width="0" layer="19" extent="1-1"/>
 </signal>
 </signals>
 <errors>

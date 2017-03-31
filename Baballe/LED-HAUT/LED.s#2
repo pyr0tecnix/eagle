@@ -1815,12 +1815,13 @@ Source: &lt;a href="http://www.cree.com/products/pdf/LEDlamps/CLN6A%28979%29.pdf
 <pin name="C_GREEN" x="-7.62" y="7.62" length="middle" rot="R270"/>
 <pin name="A_BLUE" x="7.62" y="-12.7" length="middle" rot="R90"/>
 <pin name="C_BLUE" x="7.62" y="7.62" length="middle" rot="R270"/>
-<pin name="A_WHITE" x="17.78" y="-12.7" length="middle" rot="R90"/>
-<pin name="C_WHITE" x="17.78" y="7.62" length="middle" rot="R270"/>
+<pin name="A_WHITE" x="17.78" y="7.62" length="middle" rot="R270"/>
+<pin name="C_WHITE" x="17.78" y="-12.7" length="middle" rot="R90"/>
 <wire x1="-20.32" y1="-5.08" x2="-15.24" y2="-5.08" width="0.254" layer="94"/>
 <wire x1="-10.16" y1="-5.08" x2="-5.08" y2="-5.08" width="0.254" layer="94"/>
 <wire x1="5.08" y1="-5.08" x2="10.16" y2="-5.08" width="0.254" layer="94"/>
-<wire x1="15.24" y1="-5.08" x2="20.32" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="15.24" y1="-5.08" x2="17.78" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="17.78" y1="-5.08" x2="20.32" y2="-5.08" width="0.254" layer="94"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -1832,13 +1833,13 @@ Source: &lt;a href="http://www.cree.com/products/pdf/LEDlamps/CLN6A%28979%29.pdf
 <devices>
 <device name="RGBW" package="CLN6A">
 <connects>
-<connect gate="G$1" pin="A_BLUE" pad="5"/>
-<connect gate="G$1" pin="A_GREEN" pad="3"/>
+<connect gate="G$1" pin="A_BLUE" pad="3"/>
+<connect gate="G$1" pin="A_GREEN" pad="2"/>
 <connect gate="G$1" pin="A_RED" pad="1"/>
-<connect gate="G$1" pin="A_WHITE" pad="7"/>
-<connect gate="G$1" pin="C_BLUE" pad="6"/>
-<connect gate="G$1" pin="C_GREEN" pad="4"/>
-<connect gate="G$1" pin="C_RED" pad="2"/>
+<connect gate="G$1" pin="A_WHITE" pad="4"/>
+<connect gate="G$1" pin="C_BLUE" pad="7"/>
+<connect gate="G$1" pin="C_GREEN" pad="6"/>
+<connect gate="G$1" pin="C_RED" pad="5"/>
 <connect gate="G$1" pin="C_WHITE" pad="8"/>
 </connects>
 <technologies>
@@ -2694,18 +2695,18 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 </classes>
 <parts>
 <part name="GND3" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
-<part name="I/O" library="SparkFun-Connectors" deviceset="M06" device="NO_SILK_FEMALE_PTH"/>
-<part name="SUPPLY" library="SparkFun-Connectors" deviceset="M05" device="NO_SILK"/>
-<part name="U$1" library="led" deviceset="CREE_MCE4CT" device="RGBW"/>
+<part name="I/O" library="SparkFun-Connectors" deviceset="M06" device="NO_SILK_FEMALE_PTH" value="I/O"/>
+<part name="SUPPLY" library="SparkFun-Connectors" deviceset="M05" device="NO_SILK" value="SUPPLY"/>
+<part name="U$1" library="led" deviceset="CREE_MCE4CT" device="RGBW" value="LED"/>
 <part name="Q1" library="SparkFun-DiscreteSemi" deviceset="MOSFET-NCHANNEL" device="BSS138" value="200mA/50V"/>
 <part name="Q2" library="SparkFun-DiscreteSemi" deviceset="MOSFET-NCHANNEL" device="BSS138" value="200mA/50V"/>
 <part name="Q3" library="SparkFun-DiscreteSemi" deviceset="MOSFET-NCHANNEL" device="BSS138" value="200mA/50V"/>
 <part name="RGB" library="SparkFun-Resistors" deviceset="RESISTOR" device="0805-RES" value="1KOhm"/>
 <part name="RGR" library="SparkFun-Resistors" deviceset="RESISTOR" device="0805-RES" value="1KOhm"/>
 <part name="RGG" library="SparkFun-Resistors" deviceset="RESISTOR" device="0805-RES" value="1KOhm"/>
-<part name="R_RED" library="SparkFun-Resistors" deviceset="RESISTOR" device="0805-RES"/>
-<part name="R_GREEN" library="SparkFun-Resistors" deviceset="RESISTOR" device="0805-RES"/>
-<part name="R_BLUE" library="SparkFun-Resistors" deviceset="RESISTOR" device="0805-RES"/>
+<part name="R_RED" library="SparkFun-Resistors" deviceset="RESISTOR" device="0805-RES" value="10Kohm"/>
+<part name="R_GREEN" library="SparkFun-Resistors" deviceset="RESISTOR" device="0805-RES" value="10Kohm"/>
+<part name="R_BLUE" library="SparkFun-Resistors" deviceset="RESISTOR" device="0805-RES" value="10Kohm"/>
 <part name="GND1" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="RPD_G" library="SparkFun-Resistors" deviceset="RESISTOR" device="0805-RES" value="10KOhm"/>
 <part name="RPD_R" library="SparkFun-Resistors" deviceset="RESISTOR" device="0805-RES" value="10KOhm"/>
@@ -2791,13 +2792,6 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <junction x="-33.02" y="58.42"/>
 </segment>
 </net>
-<net name="I_BUTTON" class="0">
-<segment>
-<wire x1="-63.5" y1="60.96" x2="-45.72" y2="60.96" width="0.1524" layer="91"/>
-<label x="-53.34" y="60.96" size="1.778" layer="95"/>
-<pinref part="I/O" gate="G$1" pin="4"/>
-</segment>
-</net>
 <net name="O_RED" class="0">
 <segment>
 <wire x1="-63.5" y1="55.88" x2="-38.1" y2="55.88" width="0.1524" layer="91"/>
@@ -2810,14 +2804,7 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <junction x="-38.1" y="55.88"/>
 </segment>
 </net>
-<net name="I_VBAT" class="0">
-<segment>
-<wire x1="-63.5" y1="63.5" x2="-45.72" y2="63.5" width="0.1524" layer="91"/>
-<label x="-53.34" y="63.5" size="1.778" layer="95"/>
-<pinref part="I/O" gate="G$1" pin="5"/>
-</segment>
-</net>
-<net name="V_IN" class="0">
+<net name="V_IN" class="2">
 <segment>
 <wire x1="-63.5" y1="25.4" x2="-58.42" y2="25.4" width="0.1524" layer="91"/>
 <label x="-58.42" y="25.4" size="1.778" layer="95"/>
@@ -2833,30 +2820,24 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <pinref part="U$1" gate="G$1" pin="C_GREEN"/>
 <junction x="43.18" y="76.2"/>
 <junction x="58.42" y="76.2"/>
+<label x="58.42" y="81.28" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="O_POWER_CTRL" class="0">
-<segment>
-<pinref part="I/O" gate="G$1" pin="6"/>
-<wire x1="-63.5" y1="66.04" x2="-45.72" y2="66.04" width="0.1524" layer="91"/>
-<label x="-53.34" y="66.04" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="N$1" class="0">
+<net name="N$1" class="2">
 <segment>
 <pinref part="Q3" gate="G$1" pin="S"/>
 <pinref part="R_BLUE" gate="G$1" pin="2"/>
 <wire x1="22.86" y1="17.78" x2="22.86" y2="12.7" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$2" class="0">
+<net name="N$2" class="2">
 <segment>
 <pinref part="Q2" gate="G$1" pin="S"/>
 <pinref part="R_GREEN" gate="G$1" pin="2"/>
 <wire x1="12.7" y1="30.48" x2="12.7" y2="12.7" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$3" class="0">
+<net name="N$3" class="2">
 <segment>
 <pinref part="Q1" gate="G$1" pin="S"/>
 <pinref part="R_RED" gate="G$1" pin="2"/>
@@ -2890,7 +2871,7 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <wire x1="-5.08" y1="22.86" x2="15.24" y2="22.86" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$7" class="0">
+<net name="N$7" class="2">
 <segment>
 <pinref part="Q1" gate="G$1" pin="D"/>
 <pinref part="U$1" gate="G$1" pin="A_RED"/>
@@ -2898,7 +2879,7 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <wire x1="33.02" y1="53.34" x2="33.02" y2="55.88" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$8" class="0">
+<net name="N$8" class="2">
 <segment>
 <pinref part="U$1" gate="G$1" pin="A_GREEN"/>
 <wire x1="43.18" y1="55.88" x2="43.18" y2="40.64" width="0.1524" layer="91"/>
@@ -2906,7 +2887,7 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <wire x1="43.18" y1="40.64" x2="12.7" y2="40.64" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$9" class="0">
+<net name="N$9" class="2">
 <segment>
 <pinref part="Q3" gate="G$1" pin="D"/>
 <pinref part="U$1" gate="G$1" pin="A_BLUE"/>

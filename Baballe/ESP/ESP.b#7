@@ -518,11 +518,11 @@ design rules under a new name.</description>
 </pass>
 </autorouter>
 <elements>
-<element name="C4" library="SparkFun-Capacitors" package="0805" value="100 nF" x="55.88" y="29.21" rot="R180"/>
-<element name="R5" library="SparkFun-Resistors" package="0805" value="10K" x="61.2775" y="29.5275" rot="R180"/>
-<element name="R6" library="SparkFun-Resistors" package="0805" value="10K" x="68.58" y="29.21" rot="R90"/>
-<element name="R7" library="SparkFun-Resistors" package="0805" value="10K" x="43.18" y="29.21" rot="R270"/>
-<element name="R8" library="SparkFun-Resistors" package="0805" value="10K" x="45.72" y="29.21" rot="R270"/>
+<element name="C4" library="SparkFun-Capacitors" package="0805" value="100 nF" x="46.15838125" y="23.698121875" rot="R180"/>
+<element name="R5" library="SparkFun-Resistors" package="0805" value="10K" x="67.112346875" y="21.62254375" rot="R270"/>
+<element name="R6" library="SparkFun-Resistors" package="0805" value="10K" x="65.128690625" y="21.64105625" rot="R90"/>
+<element name="R7" library="SparkFun-Resistors" package="0805" value="10K" x="47.070465625" y="21.176278125" rot="R90"/>
+<element name="R8" library="SparkFun-Resistors" package="0805" value="10K" x="45.2093375" y="21.13795625" rot="R90"/>
 <element name="U$1" library="esp8266modules" package="ESP07-16PIN" value="ESP07-16PIN" x="55.88" y="12.7">
 <attribute name="PITCH" value="0.078&quot; / 2 mm" x="55.88" y="12.7" size="1.778" layer="27" display="off"/>
 <attribute name="PINS" value="16" x="55.88" y="12.7" size="1.778" layer="27" display="off"/>
@@ -545,9 +545,6 @@ design rules under a new name.</description>
 <vertex x="40.64" y="1.27"/>
 </polygon>
 <contactref element="J2" pad="1"/>
-<wire x1="56.78" y1="29.21" x2="62.1775" y2="29.5275" width="0" layer="19" extent="1-1"/>
-<wire x1="64.08" y1="4.595" x2="62.1775" y2="29.5275" width="0" layer="19" extent="1-1"/>
-<wire x1="68.432490625" y1="4.842475" x2="64.08" y2="4.595" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="VCC" class="2">
 <contactref element="R6" pad="2"/>
@@ -557,32 +554,32 @@ design rules under a new name.</description>
 <contactref element="U$1" pad="VCC"/>
 <contactref element="C4" pad="2"/>
 <contactref element="J2" pad="4"/>
-<wire x1="54.98" y1="29.21" x2="68.58" y2="30.11" width="0" layer="19" extent="1-1"/>
-<wire x1="45.72" y1="28.31" x2="54.98" y2="29.21" width="0" layer="19" extent="1-1"/>
-<wire x1="43.18" y1="28.31" x2="45.72" y2="28.31" width="0" layer="19" extent="1-1"/>
-<wire x1="68.432490625" y1="12.462475" x2="68.58" y2="30.11" width="0" layer="19" extent="1-1"/>
+<wire x1="68.432490625" y1="12.462475" x2="65.128690625" y2="22.54105625" width="0" layer="19" extent="1-1"/>
 <wire x1="64.08" y1="8.5" x2="68.432490625" y2="12.462475" width="0" layer="19" extent="1-1"/>
 <wire x1="47.68" y1="4.595" x2="64.08" y2="8.5" width="0" layer="19" extent="1-1"/>
+<wire x1="47.070465625" y1="22.076278125" x2="47.68" y2="4.595" width="0" layer="19" extent="1-1"/>
+<wire x1="45.2093375" y1="22.03795625" x2="47.070465625" y2="22.076278125" width="0" layer="19" extent="1-1"/>
+<wire x1="45.25838125" y1="23.698121875" x2="45.2093375" y2="22.03795625" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$1">
 <contactref element="U$1" pad="GPIO15"/>
 <contactref element="R5" pad="2"/>
-<wire x1="64.08" y1="6.5" x2="60.3775" y2="29.5275" width="0" layer="19" extent="1-1"/>
+<wire x1="64.08" y1="6.5" x2="67.112346875" y2="20.72254375" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$6">
 <contactref element="U$1" pad="GPIO0"/>
 <contactref element="R6" pad="1"/>
-<wire x1="64.08" y1="10.5" x2="68.58" y2="28.31" width="0" layer="19" extent="1-1"/>
+<wire x1="64.08" y1="10.5" x2="65.128690625" y2="20.74105625" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$9">
 <contactref element="U$1" pad="REST"/>
 <contactref element="R7" pad="1"/>
-<wire x1="47.68" y1="18.5" x2="43.18" y2="30.11" width="0" layer="19" extent="1-1"/>
+<wire x1="47.070465625" y1="20.276278125" x2="47.68" y2="18.5" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$10">
 <contactref element="R8" pad="1"/>
 <contactref element="U$1" pad="CH_PD"/>
-<wire x1="47.68" y1="14.5" x2="45.72" y2="30.11" width="0" layer="19" extent="1-1"/>
+<wire x1="47.68" y1="14.5" x2="45.2093375" y2="20.23795625" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="O_GREEN">
 <contactref element="U$1" pad="GPIO13"/>

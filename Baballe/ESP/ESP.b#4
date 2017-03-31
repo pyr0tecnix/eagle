@@ -473,9 +473,9 @@ design rules under a new name.</description>
 </pass>
 </autorouter>
 <elements>
-<element name="C4" library="SparkFun-Capacitors" package="0805" value="100 nF" x="47.15838125" y="19.698121875" rot="R180"/>
-<element name="R5" library="SparkFun-Resistors" package="0805" value="10K" x="70.37745625" y="24.112346875"/>
-<element name="R6" library="SparkFun-Resistors" package="0805" value="10K" x="70.35894375" y="27.128690625" rot="R180"/>
+<element name="C4" library="SparkFun-Capacitors" package="0805" value="100 nF" x="47.85838125" y="19.698121875" rot="R180"/>
+<element name="R5" library="SparkFun-Resistors" package="0805" value="10K" x="70.37745625" y="27.112346875"/>
+<element name="R6" library="SparkFun-Resistors" package="0805" value="10K" x="70.34105625" y="24.371309375"/>
 <element name="R7" library="SparkFun-Resistors" package="0805" value="10K" x="47.823721875" y="24.070465625" rot="R180"/>
 <element name="R8" library="SparkFun-Resistors" package="0805" value="10K" x="47.86204375" y="27.2093375" rot="R180"/>
 <element name="U$1" library="esp8266modules" package="ESP07-16PIN" value="ESP07-16PIN" x="58.88" y="9.7">
@@ -494,9 +494,20 @@ design rules under a new name.</description>
 <contactref element="C4" pad="1"/>
 <contactref element="R5" pad="1"/>
 <contactref element="SUPPLY" pad="1"/>
-<wire x1="72.0188625" y1="2.991" x2="69.47745625" y2="24.112346875" width="0" layer="19" extent="1-1"/>
-<wire x1="67.08" y1="1.595" x2="72.0188625" y2="2.991" width="0" layer="19" extent="1-1"/>
-<wire x1="48.05838125" y1="19.698121875" x2="69.47745625" y2="24.112346875" width="0" layer="19" extent="1-1"/>
+<polygon width="0.3048" layer="1" isolate="0.2">
+<vertex x="45" y="32"/>
+<vertex x="44" y="31"/>
+<vertex x="44" y="1"/>
+<vertex x="45" y="0"/>
+<vertex x="73" y="0"/>
+<vertex x="74" y="1"/>
+<vertex x="74" y="31"/>
+<vertex x="73" y="32"/>
+<vertex x="66" y="32"/>
+<vertex x="66" y="22"/>
+<vertex x="52" y="22"/>
+<vertex x="52" y="32"/>
+</polygon>
 </signal>
 <signal name="VCC" class="2">
 <contactref element="R6" pad="2"/>
@@ -506,22 +517,22 @@ design rules under a new name.</description>
 <contactref element="U$1" pad="VCC"/>
 <contactref element="C4" pad="2"/>
 <contactref element="SUPPLY" pad="5"/>
-<wire x1="72.0188625" y1="13.151" x2="69.45894375" y2="27.128690625" width="0" layer="19" extent="1-1"/>
+<wire x1="72.0188625" y1="13.151" x2="71.24105625" y2="24.371309375" width="0" layer="19" extent="1-1"/>
 <wire x1="67.08" y1="5.5" x2="72.0188625" y2="13.151" width="0" layer="19" extent="1-1"/>
 <wire x1="50.68" y1="1.595" x2="67.08" y2="5.5" width="0" layer="19" extent="1-1"/>
-<wire x1="46.25838125" y1="19.698121875" x2="50.68" y2="1.595" width="0" layer="19" extent="1-1"/>
-<wire x1="46.923721875" y1="24.070465625" x2="46.25838125" y2="19.698121875" width="0" layer="19" extent="1-1"/>
+<wire x1="46.95838125" y1="19.698121875" x2="50.68" y2="1.595" width="0" layer="19" extent="1-1"/>
+<wire x1="46.923721875" y1="24.070465625" x2="46.95838125" y2="19.698121875" width="0" layer="19" extent="1-1"/>
 <wire x1="46.96204375" y1="27.2093375" x2="46.923721875" y2="24.070465625" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$1">
 <contactref element="U$1" pad="GPIO15"/>
 <contactref element="R5" pad="2"/>
-<wire x1="67.08" y1="3.5" x2="71.27745625" y2="24.112346875" width="0" layer="19" extent="1-1"/>
+<wire x1="67.08" y1="3.5" x2="71.27745625" y2="27.112346875" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$6">
 <contactref element="U$1" pad="GPIO0"/>
 <contactref element="R6" pad="1"/>
-<wire x1="67.08" y1="7.5" x2="71.25894375" y2="27.128690625" width="0" layer="19" extent="1-1"/>
+<wire x1="67.08" y1="7.5" x2="69.44105625" y2="24.371309375" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$9">
 <contactref element="U$1" pad="REST"/>
