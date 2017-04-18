@@ -2488,9 +2488,10 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <part name="GND4" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="SUPPLY3" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
 <part name="R1" library="SparkFun-Passives" deviceset="RESISTOR" device="0805-RES" value="10K"/>
-<part name="Q2" library="SparkFun-DiscreteSemi" deviceset="MOSFET-NCHANNEL" device="AO3404A"/>
+<part name="Q2" library="SparkFun-DiscreteSemi" deviceset="MOSFET-NCHANNEL" device="FQP30N06L" value="MOSFET-NCHANNELFQP30N06L"/>
 <part name="GND2" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="J1" library="SparkFun-Connectors" deviceset="M02" device="JST-PTH-VERT"/>
+<part name="R2" library="SparkFun-Passives" deviceset="RESISTOR" device="PTH-1/2W"/>
 </parts>
 <sheets>
 <sheet>
@@ -2509,13 +2510,14 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <instance part="SUPPLY3" gate="G$1" x="-58.42" y="27.94"/>
 <instance part="R1" gate="G$1" x="-17.78" y="68.58"/>
 <instance part="Q2" gate="G$1" x="5.08" y="68.58"/>
-<instance part="GND2" gate="1" x="5.08" y="45.72"/>
-<instance part="J1" gate="G$1" x="20.32" y="60.96" rot="R180"/>
+<instance part="GND2" gate="1" x="5.08" y="40.64"/>
+<instance part="J1" gate="G$1" x="12.7" y="86.36" rot="R180"/>
+<instance part="R2" gate="G$1" x="5.08" y="53.34" rot="R90"/>
 </instances>
 <busses>
 </busses>
 <nets>
-<net name="GND" class="0">
+<net name="GND" class="2">
 <segment>
 <pinref part="GND4" gate="1" pin="GND"/>
 <pinref part="J-SIGNAL" gate="G$1" pin="1"/>
@@ -2527,10 +2529,9 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <wire x1="-63.5" y1="2.54" x2="-63.5" y2="10.16" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="J1" gate="G$1" pin="2"/>
-<wire x1="12.7" y1="58.42" x2="5.08" y2="58.42" width="0.1524" layer="91"/>
+<pinref part="R2" gate="G$1" pin="1"/>
 <pinref part="GND2" gate="1" pin="GND"/>
-<wire x1="5.08" y1="58.42" x2="5.08" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="5.08" y1="48.26" x2="5.08" y2="43.18" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="VCC" class="2">
@@ -2549,8 +2550,8 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <wire x1="-63.5" y1="12.7" x2="-43.18" y2="12.7" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="Q2" gate="G$1" pin="D"/>
-<wire x1="5.08" y1="91.44" x2="5.08" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="5.08" y1="86.36" x2="5.08" y2="93.98" width="0.1524" layer="91"/>
+<pinref part="J1" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="VBAT" class="2">
@@ -2615,12 +2616,19 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <wire x1="-12.7" y1="68.58" x2="-2.54" y2="68.58" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$1" class="0">
+<net name="N$1" class="2">
 <segment>
 <pinref part="Q2" gate="G$1" pin="S"/>
-<wire x1="5.08" y1="63.5" x2="5.08" y2="60.96" width="0.1524" layer="91"/>
-<wire x1="5.08" y1="60.96" x2="12.7" y2="60.96" width="0.1524" layer="91"/>
-<pinref part="J1" gate="G$1" pin="1"/>
+<pinref part="R2" gate="G$1" pin="2"/>
+<wire x1="5.08" y1="63.5" x2="5.08" y2="58.42" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$3" class="2">
+<segment>
+<pinref part="Q2" gate="G$1" pin="D"/>
+<pinref part="J1" gate="G$1" pin="2"/>
+<wire x1="5.08" y1="78.74" x2="5.08" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="5.08" y1="78.74" x2="5.08" y2="83.82" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
@@ -2630,15 +2638,8 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <approved hash="106,1,-63.5,58.42,GPIO12,,,,,"/>
 <approved hash="106,1,-63.5,55.88,GPIO13,,,,,"/>
 <approved hash="106,1,-63.5,60.96,GPIO14,,,,,"/>
-<approved hash="106,1,-63.5,68.58,SLED,,,,,"/>
 <approved hash="106,1,-63.5,17.78,VBAT,,,,,"/>
 <approved hash="106,1,-63.5,15.24,VBAT_MESURE,,,,,"/>
-<approved hash="106,1,-63.5,12.7,VIN,,,,,"/>
-<approved hash="115,1,81.28,82.55,SBUTTON,,,,,"/>
-<approved hash="115,1,49.53,25.4,GPIO16,,,,,"/>
-<approved hash="115,1,-53.34,63.5,GPIO16,,,,,"/>
-<approved hash="115,1,-8.89,60.96,VCC,,,,,"/>
-<approved hash="115,1,55.88,60.96,VCC,,,,,"/>
 </errors>
 </schematic>
 </drawing>

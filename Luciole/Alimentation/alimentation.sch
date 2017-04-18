@@ -3839,11 +3839,11 @@ B340A  3A 40V SMA &lt;br&gt;</description>
 <part name="J2" library="SparkFun-Connectors" deviceset="USB" device="-MICROB"/>
 <part name="U1" library="SparkFun-PowerIC" deviceset="MCP73831" device=""/>
 <part name="GND3" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
-<part name="R1" library="SparkFun-Passives" deviceset="RESISTOR" device="0805-RES" value="2K"/>
+<part name="R1" library="SparkFun-Passives" deviceset="RESISTOR" device="0805-RES" value="4.7K"/>
 <part name="GND4" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="GND5" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="GND6" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
-<part name="R2" library="SparkFun-Passives" deviceset="RESISTOR" device="0805-RES" value="?"/>
+<part name="R2" library="SparkFun-Passives" deviceset="RESISTOR" device="0805-RES" value="200"/>
 <part name="LED1" library="eagle-ltspice" deviceset="LED_E" device="" value="JAUNE"/>
 <part name="R3" library="SparkFun-Passives" deviceset="RESISTOR" device="0805-RES" value="10K"/>
 <part name="GND7" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
@@ -3880,7 +3880,7 @@ B340A  3A 40V SMA &lt;br&gt;</description>
 <sheets>
 <sheet>
 <plain>
-<text x="5.08" y="66.04" size="1.778" layer="91">Dépend de la capacité de la batterie. 
+<text x="63.5" y="63.5" size="1.778" layer="91">Dépend de la capacité de la batterie. 
 Le courant de charge dépend de la batterie 
 et ne doit pas dépasser la capacité.</text>
 <text x="0" y="48.26" size="1.778" layer="91">SLED</text>

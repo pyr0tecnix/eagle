@@ -3883,6 +3883,12 @@ B340A  3A 40V SMA &lt;br&gt;</description>
 <text x="5.08" y="66.04" size="1.778" layer="91">Dépend de la capacité de la batterie. 
 Le courant de charge dépend de la batterie 
 et ne doit pas dépasser la capacité.</text>
+<text x="0" y="48.26" size="1.778" layer="91">SLED</text>
+<text x="-5.08" y="45.72" size="1.778" layer="91">SBUTTON</text>
+<text x="-2.54" y="40.64" size="1.778" layer="91">GPIO14</text>
+<text x="-2.54" y="38.1" size="1.778" layer="91">GPIO12</text>
+<text x="-2.54" y="35.56" size="1.778" layer="91">GPIO13</text>
+<text x="-2.54" y="43.18" size="1.778" layer="91">ENABLE</text>
 </plain>
 <instances>
 <instance part="J2" gate="G$1" x="-5.08" y="93.98" rot="R180"/>
@@ -3983,11 +3989,11 @@ et ne doit pas dépasser la capacité.</text>
 <wire x1="152.4" y1="81.28" x2="152.4" y2="76.2" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="J-SUPPLY" gate="G$1" pin="2"/>
 <pinref part="GND1" gate="1" pin="GND"/>
-<wire x1="-10.16" y1="-2.54" x2="-10.16" y2="-7.62" width="0.1524" layer="91"/>
 <pinref part="R6" gate="G$1" pin="1"/>
 <wire x1="-10.16" y1="-7.62" x2="17.78" y2="-7.62" width="0.1524" layer="91"/>
+<pinref part="J-SUPPLY" gate="G$1" pin="1"/>
+<wire x1="-10.16" y1="-5.08" x2="-10.16" y2="-7.62" width="0.1524" layer="91"/>
 <junction x="-10.16" y="-7.62"/>
 </segment>
 <segment>
@@ -4052,10 +4058,10 @@ et ne doit pas dépasser la capacité.</text>
 <junction x="160.02" y="91.44"/>
 </segment>
 <segment>
-<pinref part="J-SUPPLY" gate="G$1" pin="7"/>
-<wire x1="-10.16" y1="10.16" x2="-7.62" y2="10.16" width="0.1524" layer="91"/>
-<wire x1="-7.62" y1="10.16" x2="-7.62" y2="12.7" width="0.1524" layer="91"/>
 <pinref part="SUPPLY1" gate="G$1" pin="VCC"/>
+<pinref part="J-SUPPLY" gate="G$1" pin="5"/>
+<wire x1="-10.16" y1="5.08" x2="-7.62" y2="5.08" width="0.1524" layer="91"/>
+<wire x1="-7.62" y1="12.7" x2="-7.62" y2="5.08" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="VIN" class="1">
@@ -4080,10 +4086,10 @@ et ne doit pas dépasser la capacité.</text>
 <wire x1="124.46" y1="86.36" x2="134.62" y2="86.36" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="J-SUPPLY" gate="G$1" pin="4"/>
 <pinref part="SUPPLY6" gate="G$1" pin="VIN"/>
-<wire x1="-10.16" y1="2.54" x2="10.16" y2="2.54" width="0.1524" layer="91"/>
-<wire x1="10.16" y1="2.54" x2="10.16" y2="12.7" width="0.1524" layer="91"/>
+<wire x1="10.16" y1="-2.54" x2="10.16" y2="12.7" width="0.1524" layer="91"/>
+<pinref part="J-SUPPLY" gate="G$1" pin="2"/>
+<wire x1="-10.16" y1="-2.54" x2="10.16" y2="-2.54" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="V_BATT" class="1">
@@ -4106,10 +4112,10 @@ et ne doit pas dépasser la capacité.</text>
 <pinref part="J1" gate="G$1" pin="1"/>
 </segment>
 <segment>
-<pinref part="J-SUPPLY" gate="G$1" pin="6"/>
-<wire x1="-10.16" y1="7.62" x2="0" y2="7.62" width="0.1524" layer="91"/>
-<wire x1="0" y1="7.62" x2="0" y2="12.7" width="0.1524" layer="91"/>
 <pinref part="SUPPLY2" gate="G$1" pin="V_BATT"/>
+<pinref part="J-SUPPLY" gate="G$1" pin="4"/>
+<wire x1="-10.16" y1="2.54" x2="0" y2="2.54" width="0.1524" layer="91"/>
+<wire x1="0" y1="2.54" x2="0" y2="12.7" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="R5" gate="G$1" pin="2"/>
@@ -4119,13 +4125,15 @@ et ne doit pas dépasser la capacité.</text>
 </net>
 <net name="N$6" class="1">
 <segment>
-<pinref part="J-SUPPLY" gate="G$1" pin="5"/>
-<wire x1="-10.16" y1="5.08" x2="17.78" y2="5.08" width="0.1524" layer="91"/>
 <pinref part="R6" gate="G$1" pin="2"/>
 <pinref part="R5" gate="G$1" pin="1"/>
 <wire x1="17.78" y1="2.54" x2="17.78" y2="5.08" width="0.1524" layer="91"/>
-<junction x="17.78" y="5.08"/>
+<pinref part="J-SUPPLY" gate="G$1" pin="3"/>
 <wire x1="17.78" y1="5.08" x2="17.78" y2="7.62" width="0.1524" layer="91"/>
+<wire x1="-10.16" y1="0" x2="5.08" y2="0" width="0.1524" layer="91"/>
+<wire x1="5.08" y1="0" x2="5.08" y2="5.08" width="0.1524" layer="91"/>
+<wire x1="5.08" y1="5.08" x2="17.78" y2="5.08" width="0.1524" layer="91"/>
+<junction x="17.78" y="5.08"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -4142,6 +4150,42 @@ et ne doit pas dépasser la capacité.</text>
 <pinref part="R4" gate="G$1" pin="1"/>
 <pinref part="LED2" gate="G$1" pin="A"/>
 <wire x1="170.18" y1="91.44" x2="170.18" y2="86.36" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$5" class="0">
+<segment>
+<pinref part="J-SIGNAL" gate="G$1" pin="2"/>
+<wire x1="-10.16" y1="35.56" x2="5.08" y2="35.56" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$7" class="0">
+<segment>
+<pinref part="J-SIGNAL" gate="G$1" pin="3"/>
+<wire x1="-10.16" y1="38.1" x2="5.08" y2="38.1" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$8" class="0">
+<segment>
+<pinref part="J-SIGNAL" gate="G$1" pin="4"/>
+<wire x1="-10.16" y1="40.64" x2="5.08" y2="40.64" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="ENABLE" class="0">
+<segment>
+<pinref part="J-SIGNAL" gate="G$1" pin="5"/>
+<wire x1="-10.16" y1="43.18" x2="5.08" y2="43.18" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$10" class="0">
+<segment>
+<pinref part="J-SIGNAL" gate="G$1" pin="6"/>
+<wire x1="-10.16" y1="45.72" x2="5.08" y2="45.72" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$11" class="0">
+<segment>
+<pinref part="J-SIGNAL" gate="G$1" pin="7"/>
+<wire x1="-10.16" y1="48.26" x2="5.08" y2="48.26" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
