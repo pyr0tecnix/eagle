@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
+<grid distance="1" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -40,7 +40,7 @@
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
-<layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="48" name="Document" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="49" name="Reference" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
@@ -484,8 +484,8 @@ design rules under a new name.</description>
 </pass>
 </autorouter>
 <elements>
-<element name="I/O" library="SparkFun-Connectors" package="1X06_NO_SILK" value="I/O" x="67.95533125" y="2.491" rot="R90">
-<attribute name="PROD_ID" value="CONN-08437" x="67.95533125" y="2.491" size="1.778" layer="27" rot="R90" display="off"/>
+<element name="I/O" library="SparkFun-Connectors" package="1X06_NO_SILK" value="I/O" x="68.00533125" y="1.991" rot="R90">
+<attribute name="PROD_ID" value="CONN-08437" x="68.00533125" y="1.991" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
 <element name="SUPPLY" library="SparkFun-Connectors" package="1X05_NO_SILK" value="SUPPLY" x="43.9188625" y="2.026" rot="R90"/>
 <element name="Q1" library="SparkFun-DiscreteSemi" package="SOT23-3" value="200mA/50V" x="59" y="8" rot="R90">
@@ -542,7 +542,7 @@ design rules under a new name.</description>
 <wire x1="59" y1="0" x2="59" y2="0.1" width="0.3" layer="1"/>
 <wire x1="59" y1="2" x2="57" y2="0" width="0.3" layer="16"/>
 <wire x1="67.5" y1="2" x2="59" y2="2" width="0.3" layer="16"/>
-<wire x1="67.5" y1="2" x2="67.95533125" y2="2.491" width="0.3" layer="16"/>
+<wire x1="67.5" y1="2" x2="68.00533125" y2="1.991" width="0.3" layer="16"/>
 <via x="57" y="0" extent="1-16" drill="0.6096"/>
 </signal>
 <signal name="O_BLUE">
@@ -552,9 +552,9 @@ design rules under a new name.</description>
 <wire x1="49" y1="16.1" x2="49" y2="14" width="0.3" layer="1"/>
 <wire x1="50.5" y1="14" x2="49" y2="14" width="0.3" layer="1"/>
 <wire x1="50.5" y1="8" x2="50.5" y2="14" width="0.3" layer="16"/>
-<wire x1="67.5" y1="8" x2="50.5" y2="8" width="0.3" layer="16"/>
+<wire x1="67" y1="8" x2="50.5" y2="8" width="0.3" layer="16"/>
 <wire x1="49" y1="14" x2="49" y2="13.9" width="0.3" layer="1"/>
-<wire x1="67.5" y1="8" x2="67.95533125" y2="7.571" width="0.3" layer="16"/>
+<wire x1="67" y1="8" x2="68.00533125" y2="7.071" width="0.3" layer="16"/>
 <via x="50.5" y="14" extent="1-16" drill="0.6096"/>
 </signal>
 <signal name="O_RED">
@@ -564,11 +564,10 @@ design rules under a new name.</description>
 <wire x1="49" y1="6" x2="49" y2="4.9" width="0.3" layer="1"/>
 <wire x1="49.5" y1="5.5" x2="49" y2="6" width="0.3" layer="16"/>
 <wire x1="67.5" y1="5.5" x2="49.5" y2="5.5" width="0.3" layer="16"/>
-<wire x1="67.5" y1="5.5" x2="67.95533125" y2="5.031" width="0.3" layer="16"/>
-<wire x1="66" y1="7" x2="63.9" y2="7" width="0.3" layer="1"/>
-<wire x1="66" y1="6.5" x2="66" y2="7" width="0.3" layer="1"/>
-<wire x1="67.5" y1="5" x2="66" y2="6.5" width="0.3" layer="1"/>
-<wire x1="67.5" y1="5" x2="67.95533125" y2="5.031" width="0.3" layer="1"/>
+<wire x1="67.5" y1="5.5" x2="68.00533125" y2="4.531" width="0.3" layer="16"/>
+<wire x1="65" y1="7" x2="63.9" y2="7" width="0.3" layer="1"/>
+<wire x1="66" y1="6.5" x2="65" y2="7" width="0.3" layer="1"/>
+<wire x1="66" y1="6.5" x2="68.00533125" y2="4.531" width="0.3" layer="1"/>
 <via x="49" y="6" extent="1-16" drill="0.6096"/>
 </signal>
 <signal name="V_IN" class="2">
@@ -713,16 +712,19 @@ design rules under a new name.</description>
 <approved hash="4,1,495588dccc1d116c"/>
 <approved hash="4,16,5fc286ed6222a649"/>
 <approved hash="4,16,495588dccc1d116c"/>
+<approved hash="4,1,a4d05ad14b839f57"/>
+<approved hash="4,16,a4d05ad14b839f57"/>
 <approved hash="3,1,7ace823682667a9e"/>
 <approved hash="3,16,7ace823682667a9e"/>
 <approved hash="4,1,1880a1ca76ff317c"/>
-<approved hash="4,1,a4d05ad14b839f57"/>
+<approved hash="4,1,70062711149319b4"/>
 <approved hash="4,1,6ca92cc8d2d4c621"/>
 <approved hash="4,1,3f7e4ab20b8f61ca"/>
 <approved hash="4,1,826db38dfc1d596a"/>
 <approved hash="6,1,f64c237d236df65c"/>
 <approved hash="4,16,1880a1ca76ff317c"/>
-<approved hash="4,16,a4d05ad14b839f57"/>
+<approved hash="4,16,70062711149319b4"/>
+<approved hash="4,16,aa885b93e408f87f"/>
 </errors>
 </board>
 </drawing>
