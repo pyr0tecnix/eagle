@@ -143,8 +143,7 @@
 <board>
 <plain>
 <circle x="59" y="56" radius="19.026296875" width="0.1" layer="20"/>
-<circle x="59" y="56" radius="20.024984375" width="0.1" layer="47"/>
-<hole x="59" y="67" drill="15"/>
+<hole x="59" y="68" drill="15"/>
 </plain>
 <libraries>
 <library name="SparkFun-Connectors">
@@ -510,10 +509,10 @@ design rules under a new name.</description>
 </pass>
 </autorouter>
 <elements>
-<element name="I/O" library="SparkFun-Connectors" package="1X06_NO_SILK" value="I/O" x="47.05533125" y="44.356" rot="R90">
-<attribute name="PROD_ID" value="CONN-08437" x="47.05533125" y="44.356" size="1.778" layer="27" rot="R90" display="off"/>
+<element name="I/O" library="SparkFun-Connectors" package="1X06_NO_SILK" value="I/O" x="47.05533125" y="43.956" rot="R90">
+<attribute name="PROD_ID" value="CONN-08437" x="47.05533125" y="43.956" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
-<element name="SUPPLY" library="SparkFun-Connectors" package="1X05_NO_SILK" value="SUPPLY" x="70.9188625" y="44.626" rot="R90"/>
+<element name="SUPPLY" library="SparkFun-Connectors" package="1X05_NO_SILK" value="SUPPLY" x="71.0188625" y="43.926" rot="R90"/>
 <element name="BP1" library="SparkFun-Connectors" package="1X02_NO_SILK" value="BP1" x="47" y="67.365"/>
 <element name="BP2" library="SparkFun-Connectors" package="1X02_NO_SILK" value="BP2" x="69.08" y="67.3"/>
 <element name="BP3" library="SparkFun-Connectors" package="1X02_NO_SILK" value="BP3" x="47" y="62.365"/>
@@ -552,36 +551,20 @@ design rules under a new name.</description>
 <wire x1="54" y1="52" x2="56.5" y2="52" width="0.3" layer="1"/>
 <wire x1="47.5" y1="52" x2="54" y2="52" width="0.3" layer="16"/>
 <wire x1="56.5" y1="52" x2="56.7" y2="51.95" width="0.3" layer="1"/>
-<wire x1="47.5" y1="52" x2="47.05533125" y2="51.976" width="0.3" layer="16"/>
+<wire x1="47.5" y1="52" x2="47.05533125" y2="51.576" width="0.3" layer="16"/>
 <via x="54" y="52" extent="1-16" drill="0.6096"/>
 </signal>
 <signal name="V_BAT" class="2">
-<contactref element="SUPPLY" pad="4"/>
-<contactref element="BP1" pad="1"/>
-<contactref element="BP2" pad="1"/>
-<contactref element="BP3" pad="1"/>
-<contactref element="BP4" pad="1"/>
 <contactref element="R3" pad="2"/>
 <contactref element="Q1" pad="3"/>
-<wire x1="69" y1="67" x2="69" y2="62.365" width="0.5" layer="1"/>
-<wire x1="69" y1="67" x2="69.08" y2="67.3" width="0.5" layer="1"/>
-<wire x1="47" y1="67.365" x2="47" y2="62.365" width="0.5" layer="1"/>
 <wire x1="62" y1="44.5" x2="65" y2="44.5" width="0.5" layer="1"/>
 <wire x1="61" y1="43.5" x2="62" y2="44.5" width="0.5" layer="1"/>
 <wire x1="65" y1="44.5" x2="65.27" y2="44.83" width="0.5" layer="1"/>
 <wire x1="61" y1="43.5" x2="60.5432" y2="43.635" width="0.5" layer="1"/>
 <wire x1="69.5" y1="49" x2="65.5" y2="45" width="0.5" layer="1"/>
 <wire x1="69.5" y1="51" x2="69.5" y2="49" width="0.5" layer="1"/>
-<wire x1="70.5" y1="52" x2="69.5" y2="51" width="0.5" layer="1"/>
+<wire x1="70.5" y1="51" x2="69.5" y2="51" width="0.5" layer="1"/>
 <wire x1="65.5" y1="45" x2="65.27" y2="44.83" width="0.5" layer="1"/>
-<wire x1="70.5" y1="52" x2="70.9188625" y2="52.246" width="0.5" layer="1"/>
-<wire x1="48" y1="62" x2="47" y2="62" width="0.5" layer="16"/>
-<wire x1="57.5" y1="52.5" x2="48" y2="62" width="0.5" layer="16"/>
-<wire x1="70.5" y1="52.5" x2="69" y2="52.5" width="0.5" layer="16"/>
-<wire x1="69" y1="52.5" x2="57.5" y2="52.5" width="0.5" layer="16"/>
-<wire x1="47" y1="62" x2="47" y2="62.365" width="0.5" layer="16"/>
-<wire x1="70.5" y1="52.5" x2="70.9188625" y2="52.246" width="0.5" layer="16"/>
-<wire x1="69" y1="52.5" x2="69" y2="62.365" width="0.5" layer="16"/>
 </signal>
 <signal name="V_ALIM" class="2">
 <contactref element="SUPPLY" pad="2"/>
@@ -599,12 +582,12 @@ design rules under a new name.</description>
 <wire x1="55.5" y1="44.5" x2="55.5" y2="43.5" width="0.5" layer="1"/>
 <wire x1="55.5" y1="43.5" x2="55.4568" y2="43.635" width="0.5" layer="1"/>
 <wire x1="55.5" y1="45" x2="55.4568" y2="44.905" width="0.5" layer="1"/>
-<wire x1="72.5" y1="49" x2="71" y2="47.5" width="0.5" layer="1"/>
-<wire x1="72.5" y1="55.5" x2="72.5" y2="49" width="0.5" layer="1"/>
-<wire x1="71.5" y1="56.5" x2="72.5" y2="55.5" width="0.5" layer="1"/>
-<wire x1="67.5" y1="56.5" x2="71.5" y2="56.5" width="0.5" layer="1"/>
+<wire x1="67.5" y1="56.5" x2="72.5" y2="56.5" width="0.5" layer="1"/>
 <wire x1="55.5" y1="44.5" x2="67.5" y2="56.5" width="0.5" layer="1"/>
-<wire x1="71" y1="47.5" x2="70.9188625" y2="47.166" width="0.5" layer="1"/>
+<wire x1="72" y1="46.5" x2="71.0188625" y2="46.466" width="0.5" layer="1"/>
+<wire x1="72.5" y1="56.5" x2="73" y2="56" width="0.5" layer="1"/>
+<wire x1="73" y1="56" x2="73" y2="47.5" width="0.5" layer="1"/>
+<wire x1="73" y1="47.5" x2="72" y2="46.5" width="0.5" layer="1"/>
 </signal>
 <signal name="O_POWER_CTRL">
 <contactref element="I/O" pad="6"/>
@@ -617,10 +600,10 @@ design rules under a new name.</description>
 <wire x1="56" y1="40" x2="58.5" y2="42.5" width="0.3" layer="1"/>
 <wire x1="54.5" y1="40" x2="56" y2="40" width="0.3" layer="1"/>
 <wire x1="48.5" y1="46" x2="54.5" y2="40" width="0.3" layer="1"/>
-<wire x1="48.5" y1="56" x2="48.5" y2="46" width="0.3" layer="1"/>
-<wire x1="47.5" y1="57" x2="48.5" y2="56" width="0.3" layer="1"/>
+<wire x1="48.5" y1="55" x2="48.5" y2="46" width="0.3" layer="1"/>
+<wire x1="47.5" y1="56" x2="48.5" y2="55" width="0.3" layer="1"/>
 <wire x1="60.5" y1="42.5" x2="60.5432" y2="42.365" width="0.3" layer="1"/>
-<wire x1="47.5" y1="57" x2="47.05533125" y2="57.056" width="0.3" layer="1"/>
+<wire x1="47.5" y1="56" x2="47.05533125" y2="56.656" width="0.3" layer="1"/>
 </signal>
 <signal name="N$1">
 <contactref element="Q1" pad="8"/>
@@ -678,6 +661,23 @@ design rules under a new name.</description>
 <wire x1="51" y1="50" x2="51.1" y2="50.27" width="0.3" layer="1"/>
 </signal>
 <signal name="N$3">
+</signal>
+<signal name="V_IN">
+<contactref element="SUPPLY" pad="3"/>
+<contactref element="BP1" pad="1"/>
+<contactref element="BP2" pad="1"/>
+<contactref element="BP3" pad="1"/>
+<contactref element="BP4" pad="1"/>
+<wire x1="69" y1="67" x2="69" y2="62.365" width="0.5" layer="1"/>
+<wire x1="48" y1="62" x2="47" y2="62" width="0.5" layer="16"/>
+<wire x1="57.5" y1="52.5" x2="48" y2="62" width="0.5" layer="16"/>
+<wire x1="70.5" y1="52.5" x2="69" y2="52.5" width="0.5" layer="16"/>
+<wire x1="69" y1="52.5" x2="57.5" y2="52.5" width="0.5" layer="16"/>
+<wire x1="69" y1="52.5" x2="69" y2="62.365" width="0.5" layer="16"/>
+<wire x1="69" y1="67" x2="69.08" y2="67.3" width="0" layer="19" extent="1-1"/>
+<wire x1="47" y1="62.365" x2="47" y2="62" width="0" layer="19" extent="16-16"/>
+<wire x1="71.0188625" y1="49.006" x2="70.5" y2="52.5" width="0" layer="19" extent="16-16"/>
+<wire x1="47" y1="67.365" x2="47" y2="62.365" width="0" layer="19" extent="1-1"/>
 </signal>
 </signals>
 <errors>
@@ -739,6 +739,8 @@ design rules under a new name.</description>
 <approved hash="3,1,fdafebc20fddff0f"/>
 <approved hash="3,1,869e666667a6875e"/>
 <approved hash="3,16,869e666667a6875e"/>
+<approved hash="4,1,a10b408b38f532ca"/>
+<approved hash="4,16,a10b408b38f532ca"/>
 </errors>
 </board>
 </drawing>

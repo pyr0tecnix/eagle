@@ -3912,7 +3912,6 @@ B340A  3A 40V SMA &lt;br&gt;</description>
 <part name="GND10" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="C3" library="SparkFun-Capacitors" deviceset="CAP" device="0805" value="2.2 uF"/>
 <part name="SUPPLY3" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
-<part name="SUPPLY4" library="SparkFun-Aesthetics" deviceset="VIN" device=""/>
 <part name="C1" library="SparkFun-Capacitors" deviceset="CAP" device="0805" value="4.7 uF"/>
 <part name="BAT" library="SparkFun-Connectors" deviceset="M02" device="1X02_NO_SILK" value="BAT"/>
 <part name="GND15" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
@@ -3924,13 +3923,15 @@ B340A  3A 40V SMA &lt;br&gt;</description>
 <part name="R5" library="SparkFun-Passives" deviceset="RESISTOR" device="0805-RES" value="10K"/>
 <part name="R6" library="SparkFun-Passives" deviceset="RESISTOR" device="0805-RES" value="47K"/>
 <part name="SUPPLY5" library="SparkFun-Aesthetics" deviceset="V_BATT" device=""/>
-<part name="SUPPLY6" library="SparkFun-Aesthetics" deviceset="VIN" device=""/>
 <part name="USB" library="SparkFun-Connectors" deviceset="M02" device="1X02_NO_SILK" value="USB"/>
 <part name="GND2" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="I/O" library="SparkFun-Connectors" deviceset="M06" device="NO_SILK_FEMALE_PTH" value="I/O"/>
 <part name="SUPPLY" library="SparkFun-Connectors" deviceset="M05" device="NO_SILK" value="SUPPLY"/>
-<part name="V_ALIM" library="SparkFun-Aesthetics" deviceset="VCC_2" device="" value="V_ALIM"/>
+<part name="SUPPLY7" library="SparkFun-Aesthetics" deviceset="V_BATT" device=""/>
+<part name="SUPPLY8" library="SparkFun-Aesthetics" deviceset="VIN" device=""/>
 <part name="V_ALIM1" library="SparkFun-Aesthetics" deviceset="VCC_2" device="" value="V_ALIM"/>
+<part name="V_ALIM2" library="SparkFun-Aesthetics" deviceset="VCC_2" device="" value="V_ALIM"/>
+<part name="SUPPLY4" library="SparkFun-Aesthetics" deviceset="VIN" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -3959,7 +3960,6 @@ et ne doit pas dépasser la capacité.</text>
 <instance part="GND10" gate="1" x="134.62" y="73.66"/>
 <instance part="C3" gate="G$1" x="160.02" y="83.82"/>
 <instance part="SUPPLY3" gate="G$1" x="154.94" y="93.98"/>
-<instance part="SUPPLY4" gate="G$1" x="124.46" y="93.98"/>
 <instance part="C1" gate="G$1" x="73.66" y="83.82"/>
 <instance part="BAT" gate="G$1" x="-15.24" y="71.12" rot="MR180"/>
 <instance part="GND15" gate="1" x="-7.62" y="63.5"/>
@@ -3971,13 +3971,15 @@ et ne doit pas dépasser la capacité.</text>
 <instance part="R5" gate="G$1" x="10.16" y="53.34" rot="R90"/>
 <instance part="R6" gate="G$1" x="10.16" y="38.1" rot="R90"/>
 <instance part="SUPPLY5" gate="G$1" x="10.16" y="60.96"/>
-<instance part="SUPPLY6" gate="G$1" x="10.16" y="12.7"/>
 <instance part="USB" gate="G$1" x="-15.24" y="93.98" rot="MR180"/>
 <instance part="GND2" gate="1" x="10.16" y="27.94"/>
 <instance part="I/O" gate="G$1" x="-17.78" y="40.64"/>
 <instance part="SUPPLY" gate="G$1" x="-20.32" y="-5.08"/>
-<instance part="V_ALIM" gate="G$1" x="17.78" y="12.7"/>
-<instance part="V_ALIM1" gate="G$1" x="66.04" y="93.98"/>
+<instance part="SUPPLY7" gate="G$1" x="66.04" y="93.98"/>
+<instance part="SUPPLY8" gate="G$1" x="111.76" y="93.98"/>
+<instance part="V_ALIM1" gate="G$1" x="124.46" y="93.98"/>
+<instance part="V_ALIM2" gate="G$1" x="10.16" y="12.7"/>
+<instance part="SUPPLY4" gate="G$1" x="17.78" y="12.7"/>
 </instances>
 <busses>
 </busses>
@@ -4104,30 +4106,23 @@ et ne doit pas dépasser la capacité.</text>
 </net>
 <net name="VIN" class="1">
 <segment>
+<pinref part="C2" gate="G$1" pin="1"/>
+<wire x1="111.76" y1="91.44" x2="111.76" y2="86.36" width="0.1524" layer="91"/>
 <pinref part="D1" gate="G$1" pin="C"/>
 <wire x1="104.14" y1="91.44" x2="104.14" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="104.14" y1="91.44" x2="111.76" y2="91.44" width="0.1524" layer="91"/>
+<junction x="104.14" y="91.44"/>
 <pinref part="Q1" gate="G$1" pin="S"/>
 <wire x1="101.6" y1="91.44" x2="104.14" y2="91.44" width="0.1524" layer="91"/>
-<pinref part="C2" gate="G$1" pin="1"/>
-<wire x1="104.14" y1="91.44" x2="111.76" y2="91.44" width="0.1524" layer="91"/>
-<wire x1="111.76" y1="91.44" x2="111.76" y2="86.36" width="0.1524" layer="91"/>
-<wire x1="111.76" y1="91.44" x2="124.46" y2="91.44" width="0.1524" layer="91"/>
+<pinref part="SUPPLY8" gate="G$1" pin="VIN"/>
+<wire x1="111.76" y1="93.98" x2="111.76" y2="91.44" width="0.1524" layer="91"/>
 <junction x="111.76" y="91.44"/>
-<junction x="104.14" y="91.44"/>
-<pinref part="U2" gate="G$1" pin="IN"/>
-<wire x1="124.46" y1="91.44" x2="134.62" y2="91.44" width="0.1524" layer="91"/>
-<wire x1="124.46" y1="93.98" x2="124.46" y2="91.44" width="0.1524" layer="91"/>
-<junction x="124.46" y="91.44"/>
-<pinref part="SUPPLY4" gate="G$1" pin="VIN"/>
-<pinref part="U2" gate="G$1" pin="EN"/>
-<wire x1="134.62" y1="86.36" x2="124.46" y2="86.36" width="0.1524" layer="91"/>
-<wire x1="124.46" y1="86.36" x2="124.46" y2="91.44" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="SUPPLY6" gate="G$1" pin="VIN"/>
-<wire x1="10.16" y1="-5.08" x2="10.16" y2="12.7" width="0.1524" layer="91"/>
-<wire x1="10.16" y1="-5.08" x2="-12.7" y2="-5.08" width="0.1524" layer="91"/>
-<pinref part="SUPPLY" gate="G$1" pin="3"/>
+<pinref part="SUPPLY" gate="G$1" pin="2"/>
+<wire x1="-12.7" y1="-7.62" x2="17.78" y2="-7.62" width="0.1524" layer="91"/>
+<wire x1="17.78" y1="-7.62" x2="17.78" y2="12.7" width="0.1524" layer="91"/>
+<pinref part="SUPPLY4" gate="G$1" pin="VIN"/>
 </segment>
 </net>
 <net name="V_BATT" class="1">
@@ -4146,6 +4141,19 @@ et ne doit pas dépasser la capacité.</text>
 <wire x1="0" y1="12.7" x2="0" y2="-2.54" width="0.1524" layer="91"/>
 <wire x1="0" y1="-2.54" x2="-12.7" y2="-2.54" width="0.1524" layer="91"/>
 <pinref part="SUPPLY" gate="G$1" pin="4"/>
+</segment>
+<segment>
+<pinref part="U1" gate="G$1" pin="VBAT"/>
+<wire x1="58.42" y1="91.44" x2="66.04" y2="91.44" width="0.1524" layer="91"/>
+<wire x1="66.04" y1="91.44" x2="73.66" y2="91.44" width="0.1524" layer="91"/>
+<wire x1="73.66" y1="91.44" x2="73.66" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="73.66" y1="91.44" x2="91.44" y2="91.44" width="0.1524" layer="91"/>
+<junction x="73.66" y="91.44"/>
+<pinref part="Q1" gate="G$1" pin="D"/>
+<pinref part="C1" gate="G$1" pin="1"/>
+<wire x1="66.04" y1="93.98" x2="66.04" y2="91.44" width="0.1524" layer="91"/>
+<junction x="66.04" y="91.44"/>
+<pinref part="SUPPLY7" gate="G$1" pin="V_BATT"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -4169,25 +4177,22 @@ et ne doit pas dépasser la capacité.</text>
 <pinref part="I/O" gate="G$1" pin="5"/>
 </segment>
 </net>
-<net name="VCC_2" class="0">
+<net name="VCC_2" class="1">
 <segment>
-<pinref part="SUPPLY" gate="G$1" pin="2"/>
-<pinref part="V_ALIM" gate="G$1" pin="VCC_2"/>
-<wire x1="-12.7" y1="-7.62" x2="17.78" y2="-7.62" width="0.1524" layer="91"/>
-<wire x1="17.78" y1="-7.62" x2="17.78" y2="12.7" width="0.1524" layer="91"/>
+<pinref part="U2" gate="G$1" pin="IN"/>
+<wire x1="124.46" y1="91.44" x2="134.62" y2="91.44" width="0.1524" layer="91"/>
+<wire x1="124.46" y1="93.98" x2="124.46" y2="91.44" width="0.1524" layer="91"/>
+<junction x="124.46" y="91.44"/>
+<pinref part="U2" gate="G$1" pin="EN"/>
+<wire x1="134.62" y1="86.36" x2="124.46" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="124.46" y1="86.36" x2="124.46" y2="91.44" width="0.1524" layer="91"/>
+<pinref part="V_ALIM1" gate="G$1" pin="VCC_2"/>
 </segment>
 <segment>
-<pinref part="U1" gate="G$1" pin="VBAT"/>
-<wire x1="58.42" y1="91.44" x2="66.04" y2="91.44" width="0.1524" layer="91"/>
-<wire x1="66.04" y1="91.44" x2="73.66" y2="91.44" width="0.1524" layer="91"/>
-<wire x1="73.66" y1="91.44" x2="73.66" y2="88.9" width="0.1524" layer="91"/>
-<wire x1="73.66" y1="91.44" x2="91.44" y2="91.44" width="0.1524" layer="91"/>
-<junction x="73.66" y="91.44"/>
-<pinref part="Q1" gate="G$1" pin="D"/>
-<pinref part="C1" gate="G$1" pin="1"/>
-<wire x1="66.04" y1="93.98" x2="66.04" y2="91.44" width="0.1524" layer="91"/>
-<junction x="66.04" y="91.44"/>
-<pinref part="V_ALIM1" gate="G$1" pin="VCC_2"/>
+<wire x1="10.16" y1="-5.08" x2="10.16" y2="12.7" width="0.1524" layer="91"/>
+<wire x1="10.16" y1="-5.08" x2="-12.7" y2="-5.08" width="0.1524" layer="91"/>
+<pinref part="SUPPLY" gate="G$1" pin="3"/>
+<pinref part="V_ALIM2" gate="G$1" pin="VCC_2"/>
 </segment>
 </net>
 </nets>

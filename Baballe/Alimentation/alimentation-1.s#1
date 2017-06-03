@@ -3921,8 +3921,8 @@ B340A  3A 40V SMA &lt;br&gt;</description>
 <part name="SUPPLY1" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
 <part name="SUPPLY2" library="SparkFun-Aesthetics" deviceset="V_BATT" device=""/>
 <part name="GND1" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
-<part name="R5" library="SparkFun-Passives" deviceset="RESISTOR" device="0805-RES" value="2K"/>
-<part name="R6" library="SparkFun-Passives" deviceset="RESISTOR" device="0805-RES" value="2K"/>
+<part name="R5" library="SparkFun-Passives" deviceset="RESISTOR" device="0805-RES" value="10K"/>
+<part name="R6" library="SparkFun-Passives" deviceset="RESISTOR" device="0805-RES" value="47K"/>
 <part name="SUPPLY5" library="SparkFun-Aesthetics" deviceset="V_BATT" device=""/>
 <part name="SUPPLY6" library="SparkFun-Aesthetics" deviceset="VIN" device=""/>
 <part name="USB" library="SparkFun-Connectors" deviceset="M02" device="1X02_NO_SILK" value="USB"/>
@@ -3930,7 +3930,7 @@ B340A  3A 40V SMA &lt;br&gt;</description>
 <part name="I/O" library="SparkFun-Connectors" deviceset="M06" device="NO_SILK_FEMALE_PTH" value="I/O"/>
 <part name="SUPPLY" library="SparkFun-Connectors" deviceset="M05" device="NO_SILK" value="SUPPLY"/>
 <part name="V_ALIM" library="SparkFun-Aesthetics" deviceset="VCC_2" device="" value="V_ALIM"/>
-<part name="V_ALIM1" library="SparkFun-Aesthetics" deviceset="VCC_2" device="" value="V_ALIM"/>
+<part name="SUPPLY7" library="SparkFun-Aesthetics" deviceset="V_BATT" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -3977,7 +3977,7 @@ et ne doit pas dépasser la capacité.</text>
 <instance part="I/O" gate="G$1" x="-17.78" y="40.64"/>
 <instance part="SUPPLY" gate="G$1" x="-20.32" y="-5.08"/>
 <instance part="V_ALIM" gate="G$1" x="17.78" y="12.7"/>
-<instance part="V_ALIM1" gate="G$1" x="66.04" y="93.98"/>
+<instance part="SUPPLY7" gate="G$1" x="66.04" y="93.98"/>
 </instances>
 <busses>
 </busses>
@@ -4147,6 +4147,19 @@ et ne doit pas dépasser la capacité.</text>
 <wire x1="0" y1="-2.54" x2="-12.7" y2="-2.54" width="0.1524" layer="91"/>
 <pinref part="SUPPLY" gate="G$1" pin="4"/>
 </segment>
+<segment>
+<pinref part="U1" gate="G$1" pin="VBAT"/>
+<wire x1="58.42" y1="91.44" x2="66.04" y2="91.44" width="0.1524" layer="91"/>
+<wire x1="66.04" y1="91.44" x2="73.66" y2="91.44" width="0.1524" layer="91"/>
+<wire x1="73.66" y1="91.44" x2="73.66" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="73.66" y1="91.44" x2="91.44" y2="91.44" width="0.1524" layer="91"/>
+<junction x="73.66" y="91.44"/>
+<pinref part="Q1" gate="G$1" pin="D"/>
+<pinref part="C1" gate="G$1" pin="1"/>
+<wire x1="66.04" y1="93.98" x2="66.04" y2="91.44" width="0.1524" layer="91"/>
+<junction x="66.04" y="91.44"/>
+<pinref part="SUPPLY7" gate="G$1" pin="V_BATT"/>
+</segment>
 </net>
 <net name="N$1" class="0">
 <segment>
@@ -4175,19 +4188,6 @@ et ne doit pas dépasser la capacité.</text>
 <pinref part="V_ALIM" gate="G$1" pin="VCC_2"/>
 <wire x1="-12.7" y1="-7.62" x2="17.78" y2="-7.62" width="0.1524" layer="91"/>
 <wire x1="17.78" y1="-7.62" x2="17.78" y2="12.7" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="U1" gate="G$1" pin="VBAT"/>
-<wire x1="58.42" y1="91.44" x2="66.04" y2="91.44" width="0.1524" layer="91"/>
-<wire x1="66.04" y1="91.44" x2="73.66" y2="91.44" width="0.1524" layer="91"/>
-<wire x1="73.66" y1="91.44" x2="73.66" y2="88.9" width="0.1524" layer="91"/>
-<wire x1="73.66" y1="91.44" x2="91.44" y2="91.44" width="0.1524" layer="91"/>
-<junction x="73.66" y="91.44"/>
-<pinref part="Q1" gate="G$1" pin="D"/>
-<pinref part="C1" gate="G$1" pin="1"/>
-<wire x1="66.04" y1="93.98" x2="66.04" y2="91.44" width="0.1524" layer="91"/>
-<junction x="66.04" y="91.44"/>
-<pinref part="V_ALIM1" gate="G$1" pin="VCC_2"/>
 </segment>
 </net>
 </nets>
