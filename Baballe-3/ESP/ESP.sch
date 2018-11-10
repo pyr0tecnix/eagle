@@ -3576,7 +3576,7 @@ DPDT SMT slide switch, AYZ0202, SWCH-08179</description>
 <label x="-53.34" y="50.8" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="V_BATT" class="0">
+<net name="V_BATT" class="2">
 <segment>
 <pinref part="CHARGER" gate="G$1" pin="1"/>
 <wire x1="-63.5" y1="-5.08" x2="-55.88" y2="-5.08" width="0.1524" layer="91"/>
